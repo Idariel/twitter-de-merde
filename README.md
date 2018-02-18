@@ -44,3 +44,12 @@ Ajouter la gem dans le Gemfile (pas de groupe) :
 > * gem 'sass-rails', '~> 5.0' (Bootstrap est en sass, les fichiers css doivent normalement avoir l'extension .sass. Sass-rails permet d'utiliser l'extension .scss
 
 Dans le fichier **.scss** qui va bien, rajouter au début @import "Bootstrap" pour utiliser les class Bootstrap (consulter www.w3school.com pour les classes). Dans app/assets/stylesheets, on peut utiliser le fichier application.css à condition de changer l'extension en .scss. Sinon, on peut créer un autre fichier (ici custom.scss) et mettre le @import "Bootstrap" en tête du fichier.
+
+
+## Problème avec un model qui bloque un rails db:migrate
+bundle exec rails db:rollback    
+rails destroy model <model_name>
+
+When you generate a model, it creates a database migration. If you run 'destroy' on that model, it will delete the migration file, but not the database table. So before run :
+bundle exec rake db:rollback
+
