@@ -1,7 +1,7 @@
-<h1>Twitter de Merde</h1>
-<p>J'aime pas l'appli</p>
+<h1>Plusieurs exercices</h1>
 
-<%= form_for(resource, url: root_path(resource_name)) do |f| %>
-<%= f.label :tweet %>
-<%= f.text_field :tweet %>
-<% end %>
+<p>
+	<%= link_to "Twitter", twitter_path, class: "btn btn-primary" %>
+	<%= link_to "Movies", movies_index_path, class: "btn btn-primary" %>
+	<%= link_to "Cryptos", cryptos_index_path, class: "btn btn-primary" %>
+</p>

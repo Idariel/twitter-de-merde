@@ -1,0 +1,13 @@
+<h1>Twitter de Merde</h1>
+<p>J'aime pas l'appli</p>
+
+<%= form_tag root_path do %>
+  <%= label :tweet %>
+  <%= text_field :tweet %>
+<% end %>
+
+<%= form_tag("/twitter", method: "post") do %>
+  <%= label_tag(:tweet) %>
+  <%= text_field_tag(:tweet) %>
+  <%= submit_tag("TWEET") %>
+<% end %>
