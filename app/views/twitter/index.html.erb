@@ -1,13 +1,10 @@
 <h1>Twitter de Merde</h1>
 <p>J'aime pas l'appli</p>
 
-<%= form_tag root_path do %>
-  <%= label :tweet %>
-  <%= text_field :tweet %>
-<% end %>
+<p><%= link_to "Home", root_path, class: "btn btn-info" %></p>
 
-<%= form_tag("/twitter", method: "post") do %>
-  <%= label_tag(:tweet) %>
-  <%= text_field_tag(:tweet) %>
-  <%= submit_tag("TWEET") %>
-<% end %>
+<p><%= form_tag("twitter") do %>
+  <%= label_tag "Tweet : " %><br />
+  <%= text_field_tag "tweet", width=200 %></p>
+  <p><%= submit_tag "TWEET", class: "btn btn-info" %>
+<% end %></p>
